@@ -1,5 +1,7 @@
 <?php
 
+# Пока мы используем только простые оптимизации, без применения сложных алгоритмов.
+
 function main()
 {
   echo "Является ли то или иное число простым?\n";
@@ -25,6 +27,7 @@ function main()
   echo "\n";
 }
 
+# Основная функция, которая проверяет, является ли число простым.
 function is_prime_number($number)
 {
 
@@ -32,8 +35,9 @@ function is_prime_number($number)
   if ($number == 2) return True;
   if ($number % 2 == 0) return False;
 
-  $max_number = floor(sqrt($number));
+  $max_number = floor(sqrt($number)); # Поиск множителей только в диапазоне 2..sqrt(x).
 
+  # Действуем с шагом 2, так как чётные множители нас не интересуют.
   for ($divider = 3; $divider <= $max_number; $divider += 2) {
     if ($number % $divider == 0) {
       return False;
