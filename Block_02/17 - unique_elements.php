@@ -1,6 +1,6 @@
 <?php
 
-require_once '..\useful_functions.php';
+require_once "../useful_functions.php";
 
 # Строго говоря, в PHP уже реализован метод array_unique, поэтому решение данной задачи носит скорее "разминочный" характер.
 
