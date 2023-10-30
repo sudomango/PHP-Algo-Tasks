@@ -91,3 +91,31 @@ function print_array($user_array)
 {
   echo implode(", ", $user_array) . PHP_EOL;
 }
+
+# Функция swap меняет значения у двух целочисленных переменных без использования третьей.
+
+function swap(int $a, int $b)
+{
+  $a = $a ^ $b;
+  $b = $a ^ $b;
+  $a = $a ^ $b;
+
+  return [$a, $b];
+}
+
+# Функция раскладывает целое неотрицательное число в массив, состоящий из его цифр.
+
+function num_to_array($number)
+{
+  $str_number = (string)$number;
+  $result_array = str_split($str_number);
+  return $result_array;
+}
+
+# Функция, обратная предыдущей = собирает целое неотрицательное число из массива отдельных цифр.
+
+function array_to_num($user_array)
+{
+  $str_number = implode("", $user_array);
+  return $str_number;
+}
