@@ -18,10 +18,13 @@
 git clone https://github.com/sudomango/PHP-Algo-A.git
 ```
 
+Любой скрипт следует запускать **только из каталога, в котором он расположен**, ни из какого другого.
+
 Запуск решений в командной строке Windows или Linux (проверено на Ubuntu Server):
 
 ```shell
-php Folder_Name/script_name.php
+cd Block_##
+php script_name.php
 ```
 
 Далее действуем согласно инструкциям скрипта и условиям конкретной задачи.
