@@ -3,10 +3,11 @@
 function main()
 {
   $orig_string = "";
+  $path_to_file = __DIR__ . "/../resources/long_string.txt";
 
-  $file = fopen("../resources/long_string.txt", "r", "UTF-8");
+  $file = fopen($path_to_file, "r", "UTF-8");
   if ($file) {
-    $orig_string = fread($file, filesize("../resources/long_string.txt"));
+    $orig_string = fread($file, filesize($path_to_file));
     fclose($file);
   } else {
     echo "Не удалось найти файл или прочитать содержимое в нём.";

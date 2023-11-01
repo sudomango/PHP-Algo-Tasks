@@ -1,6 +1,6 @@
 <?php
 
-require_once "../useful_functions.php";
+require_once __DIR__ . "/../useful_functions.php";
 
 function main()
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-require_once "../useful_functions.php";
+require_once __DIR__ . "/../useful_functions.php";
 
 # Строго говоря, в PHP уже реализован метод array_unique, поэтому решение данной задачи носит скорее "разминочный" характер.
 
