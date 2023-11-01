@@ -39,7 +39,7 @@ function random_array($min, $max, $count, $rep)
   return $result_array;
 }
 
-# Функция print_array распечатывает массив в одну строку без использования print_r и var_export.
+# Функция print_array распечатывает содержимое массива в одну строку без использования print_r и var_export.
 function print_array($user_array)
 {
   echo implode(", ", $user_array) . PHP_EOL;

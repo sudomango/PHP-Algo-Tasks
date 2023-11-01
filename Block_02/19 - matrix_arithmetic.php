@@ -24,7 +24,6 @@ function main()
 }
 
 # Функция для нахождения самого длинного (по количеству символов) элемента в матрице.
-
 function max_in_matrix($user_matrix)
 {
   $max_length = 0;
@@ -54,6 +53,7 @@ function print_matrix($user_matrix)
   }
 }
 
+# Функция возвращает нам транспонированную матрицу.
 function transp_matrix($user_matrix)
 {
   $t_matrix = [];
@@ -68,6 +68,7 @@ function transp_matrix($user_matrix)
   return $t_matrix;
 }
 
+# Функция суммирует элементы с чётными индексами на главной диагонали.
 function sum_of_main($user_matrix)
 {
   $sum = 0;
@@ -80,6 +81,7 @@ function sum_of_main($user_matrix)
   return $sum;
 }
 
+# Последняя цифра суммы всех элементов главной и побочной диагонали матрицы.
 function last_digit_of_sum($user_matrix)
 {
   $sum = 0;
@@ -93,6 +95,7 @@ function last_digit_of_sum($user_matrix)
   return $last_digit;
 }
 
+# Функция выводит индексы последнего минимального элемента матрицы.
 function last_minimal($user_matrix)
 {
   $min = $user_matrix[0][0];

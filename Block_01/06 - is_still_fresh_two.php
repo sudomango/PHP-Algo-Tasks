@@ -14,7 +14,6 @@ function main()
 
   $date_now = new DateTime("2023-09-10");
 
-  # Проверяем каждый продукт в списке на свежесть.
   foreach ($products as $product) {
     $fresh = is_still_fresh($product, $date_now);
     echo "Продукт = " . $product[0] . ", Свежий = " . ($fresh ? "Да" : "Нет") . "\n";

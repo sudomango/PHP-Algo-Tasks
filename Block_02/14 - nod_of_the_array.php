@@ -12,7 +12,6 @@ function main()
 }
 
 # Вспомогательная функция, позволяющая найти НОД(a, b) через последовательное вычитание чисел.
-
 function find_gcd(int $num_a, int $num_b): int
 {
   while ($num_a !== $num_b) {
@@ -23,6 +22,7 @@ function find_gcd(int $num_a, int $num_b): int
   return $num_a;
 }
 
+# Основная функция для вычисления НОД в массиве чисел.
 function array_gcd(array $user_array): int
 {
   $gcd = find_gcd($user_array[0], $user_array[1]);

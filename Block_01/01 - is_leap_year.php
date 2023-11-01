@@ -4,7 +4,6 @@ function main()
 {
   $year = intval(readline("Введите желаемый год для проверки: "));
 
-  // Использование тернарного оператора.
   $is_leap = is_leap_year($year) ? "Високосный" : "Не високосный";
   echo "$year-й год = $is_leap.\n";
 }
