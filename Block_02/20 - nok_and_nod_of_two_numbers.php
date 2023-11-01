@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 function main()
 {
   $number_a = intval(readline("Введите первое натуральное число: "));
@@ -11,7 +13,7 @@ function main()
 
 # Находим НОД, используя Алгоритм Евклида: Всегда делим большее число на меньшее до тех пор, пока одно из них не разделится на другое без остатка.
 
-function find_nod($num_a, $num_b)
+function find_nod(int $num_a, int $num_b): int
 {
   while ($num_a != 0 && $num_b != 0) {
     if ($num_a > $num_b) $num_a = $num_a % $num_b;
@@ -25,7 +27,7 @@ function find_nod($num_a, $num_b)
 
 # Есть ещё алгоритм нахождения НОД через вычитание. Принцип в целом довольно похож на Алгоритм Евклида.
 
-function find_gcd($num_a, $num_b)
+function find_gcd(int $num_a, int $num_b): int
 {
   while ($num_a !== $num_b) {
     if ($num_a > $num_b) $num_a = $num_a - $num_b;
@@ -37,7 +39,7 @@ function find_gcd($num_a, $num_b)
 
 # Для вычисления НОК существует формула: НОК(a, b) = a * b / gcd(a, b).
 
-function find_nok($num_a, $num_b)
+function find_nok(int $num_a, int $num_b): int
 {
   return intdiv($num_a * $num_b, find_gcd($num_a, $num_b));
 }

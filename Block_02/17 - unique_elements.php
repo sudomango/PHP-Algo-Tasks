@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 require_once "../useful_functions.php";
 
 # Строго говоря, в PHP уже реализован метод array_unique, поэтому решение данной задачи носит скорее "разминочный" характер.
@@ -7,7 +9,7 @@ require_once "../useful_functions.php";
 function main()
 {
   $array = useful\random_array(-10, 10, 20, "y");
-  echo "Source Array = " . PHP_EOL;
+  echo "\nSource Array = " . PHP_EOL;
   useful\print_array($array);
 
   echo "\nUnique Elements From Array = " . PHP_EOL;
@@ -20,7 +22,7 @@ function main()
 }
 
 # Сортируем список, после чего поочерёдно проверяем элементы на уникальность.
-function uniques_sorted($user_array)
+function uniques_sorted(array $user_array): array
 {
   sort($user_array);
   $uniques = [];
@@ -52,7 +54,7 @@ function uniques_sorted($user_array)
 }
 
 # Альтернативная реализация, в которой мы используем функцию array_count_values.
-function unique_elements($user_array)
+function unique_elements(array $user_array): array
 {
   $uniques = [];
 

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 require_once "../useful_functions.php";
 
 function main()
@@ -11,7 +13,7 @@ function main()
 
 # Вспомогательная функция, позволяющая найти НОД(a, b) через последовательное вычитание чисел.
 
-function find_gcd($num_a, $num_b)
+function find_gcd(int $num_a, int $num_b): int
 {
   while ($num_a !== $num_b) {
     if ($num_a > $num_b) $num_a = $num_a - $num_b;
@@ -21,7 +23,7 @@ function find_gcd($num_a, $num_b)
   return $num_a;
 }
 
-function array_gcd($user_array)
+function array_gcd(array $user_array): int
 {
   $gcd = find_gcd($user_array[0], $user_array[1]);
 

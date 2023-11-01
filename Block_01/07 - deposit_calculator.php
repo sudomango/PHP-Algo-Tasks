@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 function main()
 {
 
@@ -16,14 +18,13 @@ function main()
   echo "Финальная сумма на вкладе будет равна " . number_format($result, 2, ".", "") . ". Ждём вас среди наших клиентов!\n";
 }
 
-function deposit_calc($sum, $months)
+function deposit_calc(float $sum, int $months): float
 {
   if ($months <= 6) {
     for ($x = 0; $x < $months; $x++) {
       $sum += $sum * 0.065 / 12;
     }
-  }
-  elseif ($months > 6) {
+  } elseif ($months > 6) {
     $procent = 0;
     if ($sum <= 500000) {
       $procent = 0.1;
