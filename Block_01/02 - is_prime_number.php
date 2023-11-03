@@ -4,19 +4,9 @@
 
 function main()
 {
-  echo "Является ли то или иное число простым?\n";
-
-  echo "1 = " . true_bool(is_prime_number(1)) . "\n"; # = False
-  echo "5 = " . true_bool(is_prime_number(5)) . "\n"; # = True
-  echo "123 = " . true_bool(is_prime_number(123)) . "\n"; # = False
-  echo "-10 = " . true_bool(is_prime_number(-10)) . "\n"; # = False
-  echo "13 = " . true_bool(is_prime_number(13)) . "\n"; # = True
-  echo "23 = " . true_bool(is_prime_number(23)) . "\n"; # = True
-  echo "511 = " . true_bool(is_prime_number(511)) . "\n"; # = False
-  echo "160789903 = " . true_bool(is_prime_number(160789903)) . "\n"; # = False
-  echo "323 = " . true_bool(is_prime_number(323)) . "\n"; # = False
-  echo "1095672487 = " . true_bool(is_prime_number(1095672487)) . "\n"; # = False
-
+  $user_number = intval(readline("Введите любое целое число и узнайте, является ли оно простым: "));
+  echo "Ответ: ", true_bool(is_prime_number($user_number)) . "\n";
+  
   echo "\nПростые числа от 1 до 100: ";
 
   # Для проверки распечатаем все простые числа от 1 до 100.
